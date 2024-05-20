@@ -1,4 +1,4 @@
-// Get DOM elements
+// 22360859323 Enes Malik Altınpınar
 const dataBitsInput = document.getElementById("dataBits");
 const calculateButton = document.getElementById("calculate");
 const hammingCodeTable = document.getElementById("hammingCodeTable");
@@ -6,10 +6,8 @@ const memoryTable = document.getElementById("memoryTable");
 const errorBitInput = document.getElementById("errorBit");
 const correctErrorButton = document.getElementById("correctError");
 
-// Global hammingCode variable
 let hammingCode = [];
 
-// Event listeners
 calculateButton.addEventListener("click", () => {
     const dataBits = parseInt(dataBitsInput.value);
     if (![4, 8, 16].includes(dataBits)) {
@@ -37,13 +35,13 @@ correctErrorButton.addEventListener("click", () => {
     }
 });
 
-// Hamming code calculation function
+// Hamming kodu hesaplama fonksiyonu
 function calculateHammingCode(data) {
     const dataBits = data.length;
     const totalBits = dataBits + Math.ceil(Math.log2(dataBits + 1));
     let hammingCode = [];
 
-    // Insert data bits and placeholders for parity bits
+    // Veri bitlerini ve eşlik bitleri için yer tutucuları ekleyin
     let j = 0;
     for (let i = 1; i <= totalBits; i++) {
         if (Math.log2(i) % 1 === 0) {
@@ -54,7 +52,7 @@ function calculateHammingCode(data) {
         }
     }
 
-    // Calculate parity bits
+    // Eşlik bitlerini hesapla
     for (let i = 0; i < totalBits; i++) {
         if (Math.log2(i + 1) % 1 !== 0) continue; // Skip data bit positions
 
@@ -70,12 +68,12 @@ function calculateHammingCode(data) {
     return hammingCode;
 }
 
-// Display results function
+// Sonuçları göster fonksiyonu
 function displayResults(hammingCode) {
     hammingCodeTable.innerHTML = "";
     memoryTable.innerHTML = "";
 
-    // Display Hamming code table
+    // Hamming kod tablosunu görüntüle
     const headerRowHamming = hammingCodeTable.insertRow();
     headerRowHamming.insertCell().textContent = "Bit Pozisyonu";
     headerRowHamming.insertCell().textContent = "Hamming Kodu";
@@ -90,14 +88,14 @@ function displayResults(hammingCode) {
             bitCell.classList.add("parity-bit");
         }
 
-        // Check for errors and highlight in red
+        // Hataları kontrol edin ve kırmızı ile vurgula
         if (calculateParity(hammingCode, i) !== hammingCode[i]) {
             bitCell.classList.add("error-bit");
         }
     }
     
 
-    // Display memory table
+    // Bellek tablosunu görüntüle
     const headerRowMemory = memoryTable.insertRow();
     headerRowMemory.insertCell().textContent = "Bellek";
     const memoryRowData = memoryTable.insertRow();
@@ -108,14 +106,14 @@ function displayResults(hammingCode) {
         if (Math.log2(i + 1) % 1 === 0) {
             cell.classList.add("parity-bit");
         }
-        // Check for errors and highlight in red
+        // Hataları kontrol edin ve kırmızı ile vurgula
         if (calculateParity(hammingCode, i) !== hammingCode[i]) {
             cell.classList.add("error-bit");
         }
     }
 }
 
-// Helper function to calculate parity for a given bit position
+// Belirli bir bit konumu için pariteyi hesaplayan yardımcı fonksiyon
 function calculateParity(hammingCode, bitPosition) {
     let parity = 0;
     for (let j = bitPosition; j < hammingCode.length; j++) {
