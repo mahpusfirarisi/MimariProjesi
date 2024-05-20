@@ -6,6 +6,10 @@ Simülasyon İçin Site Adresi
 ------------------------
 https://mahpusfirarisi.github.io/MimariProjesi/
 
+Simülasyon Tanıtımı İçin Youtube Video Linki
+--------------------------------------------
+https://www.youtube.com/watch?v=aQSnWOC2mlI
+
 Özellikler
 ----------
 Hamming Kodu Hesaplama: 4 bit, 8 bit veya 16 bit veri girişleri için Hamming kodlarını doğru bir şekilde hesaplar.
