@@ -22,11 +22,11 @@ th, td {
 }
 
 .parity-bit {
-  background-color: #f0f0f0; /* Light gray background for parity bits */
+  background-color: #f0f0f0; 
 }
 
 .error-bit {
-  background-color: #ffcccc; /* Light red background for error bits */
+  background-color: #ffcccc; 
   color: red;
 }
 
