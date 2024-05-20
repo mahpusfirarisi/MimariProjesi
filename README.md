@@ -2,6 +2,10 @@ Hamming Kod Simülatörü README dosyası
 
 Bu proje, HTML, CSS ve JavaScript kullanılarak geliştirilmiş basit ama etkili bir Hamming Kod Simülatörüdür. Dijital veri iletiminde hata tespiti ve düzeltme için Hamming kodlarının nasıl çalıştığını anlamanıza yardımcı olacak uygulamalı bir araçtır.
 
+Simülasyon İçin Site Adresi
+------------------------
+https://mahpusfirarisi.github.io/MimariProjesi/
+
 Özellikler
 ----------
 Hamming Kodu Hesaplama: 4 bit, 8 bit veya 16 bit veri girişleri için Hamming kodlarını doğru bir şekilde hesaplar.
