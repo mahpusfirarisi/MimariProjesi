@@ -28,7 +28,7 @@ calculateButton.addEventListener("click", () => {
 correctErrorButton.addEventListener("click", () => {
     const errorBit = parseInt(errorBitInput.value) - 1;
     if (!isNaN(errorBit) && errorBit >= 0 && errorBit < hammingCode.length) {
-        hammingCode[errorBit] ^= 1; // Flip the bit
+        hammingCode[errorBit] ^= 1; 
         displayResults(hammingCode);
     } else {
         alert("Geçersiz hata biti pozisyonu.");
@@ -45,7 +45,7 @@ function calculateHammingCode(data) {
     let j = 0;
     for (let i = 1; i <= totalBits; i++) {
         if (Math.log2(i) % 1 === 0) {
-            hammingCode.push(0); // Placeholder for parity bit
+            hammingCode.push(0); 
         } else {
             hammingCode.push(data[j]);
             j++;
@@ -54,7 +54,7 @@ function calculateHammingCode(data) {
 
     // Eşlik bitlerini hesapla
     for (let i = 0; i < totalBits; i++) {
-        if (Math.log2(i + 1) % 1 !== 0) continue; // Skip data bit positions
+        if (Math.log2(i + 1) % 1 !== 0) continue; 
 
         let parity = 0;
         for (let j = i; j < totalBits; j += (i + 1)) {
