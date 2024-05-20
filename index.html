@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hamming Code Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Hamming Code Simulator</h1>
+
+  <div>
+    <label for="dataBits">Veri Bitleri (4, 8, veya 16):</label>
+    <input type="number" id="dataBits" min="4" max="16" step="4">
+    <button id="calculate">Hamming Kodunu Hesapla</button>
+  </div>
+
+  <table id="hammingCodeTable"></table>
+
+  <h2>Bellek</h2>
+  <table id="memoryTable"></table>
+
+  <div>
+    <label for="errorBit">Hata Biti (1'den başlar):</label>
+    <input type="number" id="errorBit" min="1">
+    <button id="correctError">Hatayı Düzelt</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

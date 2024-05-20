@@ -1,0 +1,32 @@
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.bit-cell {
+  width: 30px;
+  height: 30px;
+}
+
+.parity-bit {
+  background-color: #f0f0f0; /* Light gray background for parity bits */
+}
+
+.error-bit {
+  background-color: #ffcccc; /* Light red background for error bits */
+  color: red;
+}
+
